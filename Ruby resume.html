@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div class="registration">
+        <h1>Register</h1>
+        <form id="registration-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div class="resume-builder" style="display:none;">
+        <h1>Resume Builder</h1>
+        <div id="template-selection">
+            <h2>Select a Template</h2>
+            <button onclick="selectTemplate('template1')">Template 1</button>
+            <button onclick="selectTemplate('template2')">Template 2</button>
+        </div>
+        
+        <div id="resume-fields" style="display:none;">
+            <h2>Enter Your Information</h2>
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="phone" placeholder="Phone">
+            <textarea id="summary" placeholder="Professional Summary"></textarea>
+            <button onclick="previewResume()">Preview</button>
+        </div>
+
+        <div id="resume-preview" style="display:none;">
+            <h2>Resume Preview</h2>
+            <div id="resume-content"></div>
+            <button onclick="downloadResume()">Download PDF</button>
+        </div>
+    </div>
+
+    <script src="resume.js"></script>
+</body>
+</html>
